@@ -11,7 +11,11 @@ namespace CQRS_Example.Common.CQRS
     {
         private static IQueryable<T> AddSorting<T>(this IQueryable<T> queryable, Query query)
         {
-
+            if (string.IsNullOrWhiteSpace(query.OrderBy))
+            {
+                queryable = queryable.OrderBy(x=>string.Format(""));
+            }
+            return queryable;
         }
     }
 }
