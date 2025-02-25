@@ -5,6 +5,10 @@ VisualStudioVersion = 17.12.35506.116 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS_Example.Common", "CQRS_Example.Common\CQRS_Example.Common.csproj", "{42975C55-0612-421D-8A28-1F3A3CA3E4C7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS_Example.Domain", "CQRS_Example.Domain\CQRS_Example.Domain.csproj", "{46CD4BAC-0BA9-4247-A5BB-AEF49862ED0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS_Example.Database", "CQRS_Example.Database\CQRS_Example.Database.csproj", "{0D3CAC6A-91F7-4359-A449-DAB5C619B804}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{42975C55-0612-421D-8A28-1F3A3CA3E4C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42975C55-0612-421D-8A28-1F3A3CA3E4C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42975C55-0612-421D-8A28-1F3A3CA3E4C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46CD4BAC-0BA9-4247-A5BB-AEF49862ED0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46CD4BAC-0BA9-4247-A5BB-AEF49862ED0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46CD4BAC-0BA9-4247-A5BB-AEF49862ED0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46CD4BAC-0BA9-4247-A5BB-AEF49862ED0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D3CAC6A-91F7-4359-A449-DAB5C619B804}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D3CAC6A-91F7-4359-A449-DAB5C619B804}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D3CAC6A-91F7-4359-A449-DAB5C619B804}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D3CAC6A-91F7-4359-A449-DAB5C619B804}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

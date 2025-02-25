@@ -11,7 +11,7 @@ namespace CQRS_Example.Common.EventStore
         void Apply(IAggregateRoot aggregateRoot);
     }
 
-    public interface IEvent<in T>: IEvent where T: IAggregateRoot
+    public interface IEvent<in T> : IEvent where T : IAggregateRoot
     {
         void Apply(T aggregateRoot);
     }

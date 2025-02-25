@@ -1,6 +1,6 @@
 ﻿namespace CQRS_Example.Common.EventStore
 {
-    public abstract class AggregateRoot<T>: Entity, IAggregateRoot where T: IEvent
+    public abstract class AggregateRoot<T> : Entity, IAggregateRoot where T : IEvent
     {
         private readonly IList<T> _domainEvents = new List<T>();
 
@@ -8,7 +8,7 @@
 
         public int Version { get; private set; }
 
-        public IReadOnlyCollection<T> GetDoaminEvents()
+        public IReadOnlyCollection<T> GetDomainEvents()
         {
             return _domainEvents.ToList();
         }
@@ -20,13 +20,13 @@
 
         public void LoadFromHistory(IEnumerable<T> domainEvents)
         {
-            foreach(var domainEvent in domainEvents)
+            foreach (var domainEvent in domainEvents)
             {
                 Apply(domainEvent);
             }
         }
 
-        protected void Causes (T domainEvent)
+        protected void Causes(T domainEvent)
         {
             _domainEvents.Add(domainEvent);
             Apply(domainEvent);

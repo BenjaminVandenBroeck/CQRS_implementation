@@ -6,8 +6,8 @@ namespace CQRS_Example.Common.EventStore
     {
         protected Entity() { }
 
-        public Guid Id { get; set; }
+        public string Id { get; set; }
         public Instant LastUpdatedOn { get; set; }
-        public string LastUpdatedBy {  get; set; }
+        public string LastUpdatedBy { get; set; }
     }
 }
