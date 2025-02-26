@@ -4,7 +4,7 @@ namespace CQRS_Example.Common.CQRS
 {
     public class PagedResult<T>
     {
-        protected internal PagedResult(Query query, int totalItemCount, List<T> results)
+        public PagedResult(Query query, int totalItemCount, List<T> results)
         {
             TotalItemCount = totalItemCount;
             if (totalItemCount == 0)

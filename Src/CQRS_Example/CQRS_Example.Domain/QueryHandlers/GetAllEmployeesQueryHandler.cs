@@ -1,19 +1,28 @@
 ﻿using CQRS_Example.Common.CQRS;
+using CQRS_Example.Common.ReadStore;
 using CQRS_Example.Domain.Aggregates;
 using CQRS_Example.Domain.Queries;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+using CQRS_Example.Domain.ReadModels;
+using Microsoft.Extensions.Logging;
 namespace CQRS_Example.Domain.QueryHandlers
 {
-    public class GetAllEmployeesQueryHandler : IQueryHandler<GetAllEmployeesQuery, IList<Employee>>
+    public class GetAllEmployeesQueryHandler : IQueryHandler<GetAllEmployeesQuery, PagedResult<EmployeeModel>>
     {
-        public Task<IList<Employee>> HandleAsync(GetAllEmployeesQuery query)
+        private readonly IReadStoreRepository<EmployeeModel> _readStoreRepository;
+        private readonly ILogger<GetAllEmployeesQueryHandler> _logger; 
+
+        public GetAllEmployeesQueryHandler(IReadStoreRepository<EmployeeModel> readStoreRepository, ILogger<GetAllEmployeesQueryHandler> logger)
         {
-            throw new NotImplementedException();
+            _readStoreRepository = readStoreRepository;
+            _logger = logger;
+        }
+
+        public async Task<PagedResult<EmployeeModel>> HandleAsync(GetAllEmployeesQuery query)
+        {
+            var queryable = _readStoreRepository.GetQueryable();
+
+            var pagedResult = await queryable.ToPagedResult(query);
+            return pagedResult;
         }
     }
 }
