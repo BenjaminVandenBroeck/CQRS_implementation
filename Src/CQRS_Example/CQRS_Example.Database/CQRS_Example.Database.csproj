@@ -12,6 +12,7 @@
     <PackageReference Include="Microsoft.Extensions.Options" Version="9.0.2" />
     <PackageReference Include="NodaTime" Version="3.2.1" />
     <PackageReference Include="NodaTime.Serialization.JsonNet" Version="3.2.0" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.6.0.2" />
   </ItemGroup>
 
   <ItemGroup>

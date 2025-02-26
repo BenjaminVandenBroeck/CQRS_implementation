@@ -36,7 +36,6 @@ namespace CQRS_Example.Domain.CommandHandlers
                 throw _logger.LogAndThrowDomainError("No employee with Id {EmployeeId} found", ErrorIdentifier, ExceptionType.NotFound, command.EmployeeId);
             }
 
-
             if(command.Level== EmployeeLevel.CEO)
             {
                 var ceo = _readStoreRepository.GetQueryable().Where(x => x.Level == EmployeeLevelModel.CEO).FirstOrDefault();

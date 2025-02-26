@@ -1,6 +1,5 @@
 ﻿using CQRS_Example.Common.CQRS;
 using CQRS_Example.Common.ReadStore;
-using CQRS_Example.Domain.Aggregates;
 using CQRS_Example.Domain.Queries;
 using CQRS_Example.Domain.ReadModels;
 using Microsoft.Extensions.Logging;
