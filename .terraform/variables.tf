@@ -30,7 +30,7 @@ variable "cosmosdb_account_sku" {
 
 variable "cosmosdb_name" {
   description = "The Cosmos DB database name"
-  default     = "Gate"
+  default     = "CQRS_Implementation"
 }
 
 variable "cosmosdb_employee_events_container_name" {
